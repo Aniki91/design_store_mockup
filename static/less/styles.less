@@ -1,0 +1,354 @@
+@light-grey: #969696;
+@light-blue: #3498DB;
+@blue: #2980B9;
+
+h1, h2, h3, h4, h5, h6, a, p, span, ul {
+	font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+    height: auto;
+}
+
+.clearfix{
+  zoom:1;
+  &:before, &:after{ content:""; display:table; }
+  &:after{ clear: both; }
+}
+
+.header {
+	.clearfix();	
+	white-space: nowrap;
+	width: 60%;
+	min-width: 1000px;
+	height: 85px;
+	margin: 0 auto;
+
+	.store-logo {
+		display: inline-block;
+		float: left;
+		position: relative;
+		height: 85px;
+		width: 20%;
+		top: 20px;
+		background: url("/static/img/logo/store_logo.png") no-repeat;
+	}
+	
+	.search-bar {
+		display: inline-block;
+		position: relative;
+		width: 60%;
+		height: 85px;
+		margin: 0 auto;
+
+			#search {
+			position: absolute;
+			width: 70%;
+			height: 25px;
+			margin-top: 30px;
+			left: 18%;
+			border-radius: 50px;
+			border: 1px solid @light-blue;
+			background: url("/static/img/logo/search_logo.png") no-repeat;
+			background-size: 20px 20px; 
+			background-position: 5px 5px;
+			padding-left: 30px;
+
+			&:focus {
+				outline: 0;
+				border: 2px solid @blue;
+				background-position: 4px 4px;
+			}
+		}
+	}
+
+	.buy-basket {
+		height: 85px;
+		width: 20%;
+		float: right;
+
+		img {
+			width: 40px;
+			margin-top: 20px;
+			float: right;
+		}
+	}
+}
+
+.nav-bar {
+	position: relative;
+	width: 100%;
+	min-width: 1000px;
+	height: 35px;
+	background-color: @light-blue;
+
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(34,104,148,1);
+	-moz-box-shadow: 0px 1px 1px 0px rgba(34,104,148,1);
+	box-shadow: 0px 1px 1px 0px rgba(34,104,148,1);
+
+	.nav-bar-links {
+		display: inline;
+		width: 60%;
+		margin: 0 auto;
+
+		.nav-bar-list {
+			padding-top: 7px;
+			list-style: none;
+			margin: 0 auto;
+			text-align: center;
+			padding-left: 0px;
+
+			li {
+				display: inline;
+				color: white;
+				border-left: 1px solid white;
+				border-right: 1px solid white;
+				padding-left: 2%;
+				padding-right: 2%;
+			}
+
+			a {
+				text-decoration: none;
+				color: white;
+			}
+
+			#first-link {
+				border-left: 0px;
+			}
+
+			#last-link {
+				border-right: 0px;
+			}
+		}
+	}
+}
+
+.main-sale {
+	white-space: nowrap;
+	width: 100%;
+	height: 425px;
+	background: @blue;
+	
+	.inner-sale {
+		height: 100%;
+		width: 1000px;
+		min-width: 1000px;
+		margin: 0 auto;
+
+		.current-product {
+			display: inline-block;
+			width: 40%;
+			height: 425px;
+			background: url("/static/img/template/tshirt_template.png") no-repeat;
+			background-position: 10px 40px;
+		}
+
+		.product-description {
+			vertical-align: top;
+			display: inline-block;
+			width: 60%;
+			height: 425px;
+
+			.description {
+				padding-top: 50px;
+				padding-left: 50px;
+				width: 80%;
+				white-space: normal;
+
+				h1 {
+					color: white;
+					line-height: 10px;
+				}
+
+				p {
+					color: white;
+					padding-top: 15px;
+					padding-bottom: 15px;
+					line-height: 25px;
+				}
+
+				.buy-button {
+					width: 125px;
+					height: 40px;
+					color: white;
+					background-color: @blue;
+					border: 2px solid white;
+					border-radius: 5px;
+					font-family: 'Open Sans', sans-serif;
+
+					&:hover {
+						background-color: @light-blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+.second-sale {
+	position: relative;
+	width: 100%;
+	height: 190px;
+
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(34,104,148,1);
+	-moz-box-shadow: 0px 1px 1px 0px rgba(34,104,148,1);
+	box-shadow: 0px 1px 1px 0px rgba(34,104,148,1);
+
+	.second-inner-sale {
+		width: 70%;
+		min-width: 1000px;
+		height: 190px;
+		margin: 0 auto;
+
+	.product-1, .product-2, .product-3 {
+		display: inline-block;
+		height: 190px;
+		width: 20%;
+		min-width: 20%;
+		background: url("/static/img/template/tshirt_template_invert.png") no-repeat;
+		background-size: 100px 100px;
+		background-position: 0px 50px;
+		margin-left: 11%;
+
+			h2 {
+			color: @light-grey;
+			padding-left: 125px;
+			padding-top: 35px;
+			}
+
+			.product-buy {
+				margin-left: 125px;
+				width: 60px;
+				height: 30px;
+				color: white;
+				border-radius: 3px;
+				background-color: @light-blue;
+				border: 0px;
+			}
+		}
+	}
+}
+
+.featured-products {
+	width: 100%;
+	height: 68px;
+	background: @blue;
+	
+	.inner-featured-products {
+		width: 60%;
+		min-width: 1000px;
+		height: 68px;
+		margin: 0 auto;
+
+		h1 {
+			color: white;
+			margin: 0 auto;
+			padding-top: 10px;
+			padding-left: 75px;
+		}
+	}
+}
+
+.main-gallery-body {
+	position: relative;
+	width: 55%;
+	min-width: 1000px;
+	height: 660px;
+	margin: 0 auto;
+	
+	.product-gallery-1, .product-gallery-2, .product-gallery-3, .product-gallery-4, .product-gallery-5, .product-gallery-6 {
+		display: inline-block;
+		width: 256px;
+		height: 256px;
+		border-bottom: 5px solid @blue;
+		margin-left: 4%;
+		margin-right: 3%;
+		margin-top: 5%;
+		max-height: 100%;
+		
+		.item {
+			background: url("/static/img/template/tshirt_template_invert.png") no-repeat;
+			background-size: 128px 128px;
+			margin-left: 64px;
+			height: 256px;
+			width: 256px;
+
+			h1 {
+				padding-top: 128px;
+				padding-left: 28px;
+				color: @light-grey;
+			}
+
+			.item-buy {
+				height: 40px;
+				margin-left: 18px;
+				margin-top: -16px;
+				color: white;
+				border-radius: 3px;
+				background-color: @light-blue;
+				border: 0px;
+			}
+		}
+	}
+}
+
+.footer-links {
+	white-space: nowrap;
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background-color: @blue;
+
+	.inner-footer-links {
+		width: 60%;
+		min-width: 1000px;
+		height: 200px;
+		margin: 0 auto;
+
+		.mens-footer, .womens-footer {
+			display: inline-block;
+			width: 18%;
+			margin-left: 14px;
+			height: 200px;
+			vertical-align: top;
+
+			h2 {
+				position: relative;
+				color: white;
+				margin: 0 auto;
+				top:-9px;
+				text-align: center;
+			}
+
+			ul {
+				color: white;
+				text-align: center;
+			}
+
+			.links-in-footer {
+				list-style: none;
+				text-align: center;
+				padding-right: 40px;
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+.final-footer {
+	width: 100%;
+	height: 32px;
+	background-color: @light-blue;
+	margin: 0 auto;
+
+	p {
+		margin: 0 auto;
+		text-align: center;
+		padding-top: 7px;
+		color: white;
+		font-size: 14px;
+	}
+}
